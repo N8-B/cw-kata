@@ -19,6 +19,7 @@ import Account from './dashboard-sections/Account';
 const rashmiImage = require('../styles/images/rashmi.png');
 const logoImage = require('../styles/images/logo.png');
 const logoInitials = require('../styles/images/logo-initials.png');
+const lock = require('../styles/images/lock.png');
 
 const API_URL = 'https://s3.amazonaws.com/coverwallet-funk/katas/notifications.json';
 

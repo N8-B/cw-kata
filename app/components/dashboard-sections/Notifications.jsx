@@ -4,6 +4,7 @@
 import React from 'react';
 
 const rashmiImage = require('../../styles/images/rashmi.png');
+const lock = require('../../styles/images/lock.png');
 
 class Notifications extends React.Component {
 

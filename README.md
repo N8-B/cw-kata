@@ -2,7 +2,7 @@
 
 This is the source code for the coding exercise for the [CoverWallet software developer position](http://www.coverwallet.com/jobs/frontend-developer).
 
-A working demo can be found [here](https://github.com/N8-B).
+A working demo can be found [here](http://n8-b.github.io/cw-kata/).
 
 ___
 
@@ -26,6 +26,7 @@ HTML comment from the header of the software developer job opening page. Nice on
 - Add **React Router** and hook up routing for the dashboard section views.
 - Revisit/refactor grid for the section content views. Perhaps the use of `ul/li` for the notification section layout would be simpler (i.e. less ugly).
 - Investigate why background images referenced in CSS sometimes work and sometimes result in a 404. Might have to do with source maps and webpack-dev-server.
+- Find a nicer icon set to replace Font Awesome icons.
 
 ### Installation
 
