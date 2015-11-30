@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "deploy": "webpack && node deploy_gh_pages.js"
+    "deploy": "node deploy_gh_pages.js"
   },
   "author": "Nathan Burkiewicz",
   "license": "ISC",
