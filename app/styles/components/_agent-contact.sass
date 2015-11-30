@@ -1,0 +1,76 @@
+// Agent Contact Component Desktop
+
+.agent-contact-desktop
+  text-align: center
+  padding: 1em 1em
+  line-height: $base-line-height * 0.85
+  font-size: $base-font-size * 0.8
+
+  img
+    margin: 0 auto
+    border-radius: 50%
+    width: 100px
+
+  h3
+    font-size: $base-font-size * 0.95
+    margin: 0.3em 0 0.1em 0
+
+  .agent-contact-desktop-telephone
+    color: $orange
+
+  p
+    margin-bottom: 0
+
+  .agent-contact-desktop-shedule
+    font-size: $base-font-size * 0.85
+
+  button
+    margin: 0.75em
+
+// Agent Contact Component Mobile
+
+.agent-contact-mobile
+  line-height: $base-line-height * 0.85
+  font-size: $base-font-size
+  padding: 2em
+  margin-right: 1.9em
+  margin-bottom: 3em
+  text-align: center
+  border-top: 1px solid $medium-gray
+  +media($small-screen-up)
+    margin-bottom: 10em
+  +media($medium-screen-up)
+    font-size: $base-font-size * 1.15
+
+  .agent-contact-mobile-img
+    +fill-parent
+    +media($small-screen-up)
+      +span-columns(3)
+
+    img
+      border-radius: 50%
+      width: 150px
+      margin-bottom: 0.5em
+
+  .agent-contact-mobile-details
+    +fill-parent
+    +media($small-screen-up)
+      +span-columns(9)
+
+    h3
+      margin-bottom: 0.15em
+
+    .agent-contact-mobile-telephone
+      color: $orange
+
+    p
+      margin-bottom: 0
+
+    .agent-contact-mobile-shedule
+      font-size: $base-font-size * 0.9
+
+    button
+      margin-top: 1em
+      font-size: $base-font-size * 0.85
+      +media($small-screen-up)
+        font-size: $base-font-size * 1

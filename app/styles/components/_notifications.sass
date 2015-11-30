@@ -1,0 +1,165 @@
+// Notifications Section
+
+.notifications
+  +outer-container
+  padding-right: 1.9em
+  font-size: $base-font-size * 0.9
+  +media($medium-screen-up)
+    padding-left: 2em
+    font-size: $base-font-size * 1
+
+  .notification
+    margin: 2em 0
+    +media($medium-screen-up)
+      margin: 2em 0
+      display: table
+      width: 100%
+
+    .notification-list-icon, .notification-list-item
+      +media($medium-screen-up)
+        display: table-cell
+        vertical-align: top
+        position: relative
+
+    .notification-list-icon
+      padding-right: 1.5em
+      padding-left: 2em
+      margin: 0 auto
+
+      .icon
+        margin: 0 auto
+        border: 3px solid $blue
+        border-radius: 50%
+
+    &:nth-of-type(1)
+      .notification-list-icon
+        &:after
+          +media($medium-screen-up)
+            content: ""
+            width: 3px
+            height: 230px
+            background: $blue
+            position: absolute
+            left: 55%
+            margin: 0 0 0 -3px
+            // top: 100%
+            z-index: $base-z-index - 1
+
+        .icon
+          height: 70px
+          width: 70px
+          background-color: $blue
+          background-image: url(/styles/images/logo-initials.png)
+          background-size: 60px
+          background-position: 50% 45%
+          background-repeat: no-repeat
+          border-radius: 50%
+          margin: 0 auto
+
+    &:nth-of-type(2)
+      .notification-list-icon
+        +media($medium-screen-up)
+          padding: 0 27px 0 2.4em
+
+        .icon
+          height: 60px
+          width: 60px
+          background-color: $white
+          background-image: url(/styles/images/lock.png)
+          background-size: cover
+          background-position: 50% 45%
+          background-repeat: no-repeat
+          border-radius: 50%
+          margin: 0 auto
+
+    &:nth-of-type(3)
+      .notification-list-icon
+        +media($medium-screen-up)
+          padding: 0 33px 0 2.75em
+
+        .icon
+          height: 50px
+          width: 50px
+          background-color: $white
+          background-image: url(/styles/images/rashmi.png)
+          background-size: cover
+          background-position: 50% 45%
+          background-repeat: no-repeat
+          border-radius: 50%
+          margin: 0 auto
+
+    .notification-list-item
+      margin: 1em 0 3em 0
+      background-color: $light-gray
+      box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.5)
+      padding: 1em 1em
+      +media($medium-screen-up)
+        width: 100%
+        padding: 1.5em 1.5em
+
+      .notification-list-item-title
+        text-transform: uppercase
+        font-weight: 300
+        margin-bottom: 0
+        font-size: $base-font-size * 1.25
+        color: $blue
+
+      .notification-list-item-title--icon
+        cursor: pointer
+        display: inline-block
+        width: 30px
+        height: 30px
+        float: right
+        border: 1px solid $blue
+        background-color: $light-gray
+        border-radius: 50%
+        +transition-property(all)
+        +transition-duration(300ms)
+        +transition-timing-function(ease-in-out)
+
+        &:hover
+          background-color: $blue
+
+        i.fa
+          font-size: $base-font-size * 0.975
+          padding-left: 0.45em
+          padding-top: 0.25em
+          +transition-property(all)
+          +transition-duration(300ms)
+          +transition-timing-function(ease-in-out)
+          +media($medium-screen-up)
+            padding-left: 0.4em
+            padding-top: 0.15em
+
+          &:hover
+            color: $white
+
+      a
+        text-transform: uppercase
+        font-weight: 300
+        margin-bottom: 0
+        font-size: $base-font-size * 1.15
+        color: $blue
+        &:hover
+          color: $orange
+
+    &:nth-of-type(2)
+      .notification-list-item
+        .notification-list-item-title
+          color: $orange
+
+  i.fa
+    font-size: $base-font-size * 0.7
+    color: $blue
+    vertical-align: middle
+    +media($medium-screen-up)
+      font-size: $base-font-size * 0.55
+
+  .arrow-left
+    box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.5)
+    margin-right: -10px
+    margin-top: 15px
+    width: 20px
+    height: 20px
+    background: $light-gray
+    transform: rotate(45deg)

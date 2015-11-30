@@ -1,0 +1,47 @@
+// Bitters 1.1.0
+// http://bitters.bourbon.io
+// Copyright 2013-2015 thoughtbot, inc.
+// MIT License
+
+@import "variables"
+
+// Neat Settings -- uncomment if using Neat -- must be imported before Neat
+@import "grid-settings"
+
+@import "buttons"
+@import "forms"
+@import "lists"
+@import "tables"
+@import "typography"
+
+// Global App Styles
+body
+  background-color: #fff
+  font-family: 'Open Sans', serif
+
+  h1
+    font-size: $base-font-size * 3
+
+// The App is wrapped in this container.
+// See base/_grid-settings for width and breakpoints
+.container
+  +outer-container
+
+  +selection
+    background: $blue
+    color: $base-background-color
+
+// Styling to adapt content to fixed dashboard header and nav
+.page-wrap
+  @include calc(width, '100% - $dashboard-nav-width')
+  margin-left: $dashboard-nav-width--mobile
+  +media($medium-screen-up)
+    margin-left: $dashboard-nav-width
+
+  margin-top: $dashboard-header-height--mobile
+  +media($medium-screen-up)
+    margin-top: $dashboard-header-height
+
+a[href^="tel"]
+    color:inherit
+    text-decoration:none
