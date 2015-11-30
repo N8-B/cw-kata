@@ -813,7 +813,7 @@ body {
       height: 70px;
       width: 70px;
       background-color: #438bd7;
-      background-image: url(/styles/images/logo-initials.png);
+      background-image: url(./styles/images/logo-initials.png);
       background-size: 60px;
       background-position: 50% 45%;
       background-repeat: no-repeat;
