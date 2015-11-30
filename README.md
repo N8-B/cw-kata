@@ -24,6 +24,7 @@ HTML comment from the header of the software developer job opening page. Nice on
 
 **TODO:**
 - Add **React Router** and hook up routing for the dashboard section views.
+- Add tests for React components.
 - Revisit/refactor grid for the section content views. Perhaps the use of `ul/li` for the notification section layout would be simpler (i.e. less ugly).
 - Investigate why background images referenced in CSS sometimes work and sometimes result in a 404. Might have to do with source maps and webpack-dev-server.
 - Find a nicer icon set to replace Font Awesome icons.

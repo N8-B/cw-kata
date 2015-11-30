@@ -24,7 +24,7 @@ const sassPaths = require('node-neat').with([
 const common = {
   entry: APP_PATH,
   resolve: {
-    extensions: ['', '.js', '.jsx', '.css', '.scss', '.sass']
+    extensions: ['', '.js', '.jsx', '.css', '.scss', '.sass', 'png']
   },
   output: {
     path: BUILD_PATH,
@@ -59,7 +59,7 @@ if(TARGET === 'start' || !TARGET) {
         },
         {
           test: /\.(png|jpg|gif)$/,
-          loader: "file-loader?name=styles/images/[name].[ext]"
+          loader: "file-loader?name=/styles/images/[name].[ext]"
         },
         { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]" },
         { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader?name=fonts/[name].[ext]" }
@@ -78,6 +78,9 @@ if(TARGET === 'start' || !TARGET) {
   });
 }
 
+// INVESTIGATE:
+// Background image paths in build should be 'background-image: url(./images/rashmi.png);' and NOT
+// 'background-image: url(/styles/images/logo-initials.png);' which is what is required to render during development.
 if(TARGET === 'build' || TARGET === 'stats') {
   module.exports = merge(common, {
     entry: {
@@ -98,7 +101,7 @@ if(TARGET === 'build' || TARGET === 'stats') {
         },
         {
           test: /\.(png|jpg|gif)$/,
-          loader: "file-loader?name=styles/images/[name].[ext]"
+          loader: "file-loader?name=/styles/images/[name].[ext]"
         },
         { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]" },
         { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader?name=fonts/[name].[ext]" }
@@ -107,7 +110,7 @@ if(TARGET === 'build' || TARGET === 'stats') {
     },
     plugins: [
       new Clean(['build']),
-      new ExtractTextPlugin('./styles/styles.[chunkhash].css'),
+      new ExtractTextPlugin('./styles/styles.css'),
       new webpack.optimize.CommonsChunkPlugin(
         'vendor',
         '[name].[chunkhash].js'
