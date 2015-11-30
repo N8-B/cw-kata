@@ -826,7 +826,7 @@ body {
       height: 60px;
       width: 60px;
       background-color: white;
-      background-image: url(/styles/images/lock.png);
+      background-image: url(./images/lock.png);
       background-size: 32px 35px;
       background-position: 50% 45%;
       background-repeat: no-repeat;
@@ -839,7 +839,7 @@ body {
       height: 50px;
       width: 50px;
       background-color: white;
-      background-image: url(/styles/images/rashmi.png);
+      background-image: url(./images/rashmi.png);
       background-size: cover;
       background-position: 50% 45%;
       background-repeat: no-repeat;
